@@ -17,10 +17,10 @@ that sier2 uses to find blocks. The entry point name is `sier2.config`. Packages
 the entry point implement a function that returns a config dictionary, and specify the
 following section in `pyproject.toml`.
 
-```
-[project.entry-points."sier2.config"]
-export = "sier2_blocks_config:config"
-```
+.. code-block:: text
+
+    [project.entry-points."sier2.config"]
+    export = "sier2_blocks_config:config"
 
 A convenience function called `get_block_config()` is provided by `sier2`. This function
 looks up the entry point, calls the config function, and returns the dictionary.
