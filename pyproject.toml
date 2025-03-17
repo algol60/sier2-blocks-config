@@ -1,0 +1,30 @@
+[project]
+name = "sier2-blocks-config"
+version = "0.1"
+description = "Configuration for sier2-blocks."
+authors = [
+    {name="Algol60", email="algol60 <algol60@users.noreply.github.com>"}
+]
+readme = "README.rst"
+packages = [{include = "sier2_blocks_config", from = "src"}]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries"
+]
+
+[dependencies]
+python = "^3.11"
+
+[project.entry-points."sier2.config"]
+export = "sier2_blocks_config:config"
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core>=2.1.1"]
+build-backend = "poetry.core.masonry.api"
