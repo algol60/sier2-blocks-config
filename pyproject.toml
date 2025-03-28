@@ -1,6 +1,6 @@
 [project]
 name = "sier2-blocks-config"
-version = "0.1"
+version = "0.2"
 description = "Configuration for sier2-blocks."
 authors = [
     {name="Algol60", email="algol60 <algol60@users.noreply.github.com>"}
@@ -19,8 +19,8 @@ classifiers = [
 [dependencies]
 python = "^3.11"
 
-[project.entry-points."sier2.config"]
-export = "sier2_blocks_config:config"
+[project.entry-points."sier2.library"]
+export = "sier2_blocks_config.shelf"
 
 [[tool.mypy.overrides]]
 ignore_missing_imports = true
